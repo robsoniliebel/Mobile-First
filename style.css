@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-heading: 'Staatliches', sans-serif;
+    --ff-texting: 'Roboto', cursive;
+
+    --bg-primary: hsla(218, 17%, 62%, 1);
+    --bg-secondary: hsla(233, 100%, 97%, 1);
+    --bg-tertiary: hsla(275, 18%, 79%, 1);
+    --bg-bottom: hsla(312, 91%, 96%, 1);
+   
+    --fc-primary: hsla(0, 0%, 100%, 1);
+    --fc-secondary: hsla(274, 84%, 12%, 1);
+    --fc-tertiary: hsla(232, 17%, 35%, 1);
+
+    font-size: 62.5%;
+    --fs-body: 2rem;
+    --fs-heading: 4rem;
+}
+
+/* Aqui foi colocado a cor de fundo*/
+body {
+    background: var(--bg-secondary);
+}
+
+/* Ajuste da Logo*/
+#logo {
+    padding: 3.2rem 0;
+}
+
+/* Ajuste do Titulo Space Cream*/
+h1 {
+    font-size: var(--fs-heading);
+    color: var(--fc-primary);
+    font-weight: 400;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+    -webkit-font-smoothing: antialiased; /*comando para suavizar a fonte*/
+}
+
+/* Ajuste do Texto Space Cream e nomes dos sorvetes*/
+h1, span {
+    font-family: var(--ff-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    line-height: 3.4rem;
+}
+
+/* Ajuste do Header onde contem a logo, Titulo e cor de fundo*/
+header {
+    background: var(--bg-primary);
+    display: grid;
+    place-items: center;
+}
+
+/* Ajuste da barra do Space Cream*/
+.title {
+    background: var(--bg-tertiary);
+    margin-bottom: 2.9rem;
+    padding: 0.8rem;
+    width: 100%;
+    text-align: center;
+}
+
+/* Ajuste do conteudo onde está o P e as Imagens*/
+main {
+    display: flex;
+    flex-direction: column; /*foi usado esse comando para todo o conteudo
+    ficar na vertical mais info: https://developer.mozilla.org/pt-BR/docs/Web/CSS/flex-direction*/
+    align-items: center;
+    padding: 1.8rem 3.2rem 6rem;
+}
+
+/* Ajuste do conteudo do P*/
+.text {
+    font-family: var(--ff-texting);
+    text-align: center;
+    width: 31.5rem;
+    font-size: 1.3rem;
+    font-weight: normal;
+    line-height: 1.5rem;
+    color: var(--fc-secondary);
+    -webkit-font-smoothing: antialiased; /*comando para suavizar a fonte*/
+}
+
+/* Ajuste contendo todo o conteudo dentro da div cards */
+.cards {
+    display: grid;
+    gap: 3.2rem; /*esse comando é para dar espaçamento entre as imagens*/
+    
+    margin-top: 6rem; /*esse comando foi dado para dar o espaçamento entre
+    o texto do <p> e o primeiro card*/
+}
+
+/* Ajuste geral dos card entro da div cards*/
+.cards .card {
+    position: relative;
+    /* Foi usado position relative, Isso significa que
+    é possível ajustar o elemento para cima, para baixo,
+    para a esquerda ou para a direita, usando as propriedades
+    top, bottom, left e right ex: https://developer.mozilla.org/pt-BR/docs/Web/CSS/position*/
+    
+    
+    
+    height: fit-content; /*função também pode ser usado como previsto tamanho da caixa de width, height,
+     min-width, min-height, max-width e max-height, onde os tamanhos máximo e mínimo referem-se ao tamanho
+     do conteúdo.*/
+}
+
+/* Ajuste geral dos conteudos que vão dentro dos cards */
+.cards .card span {
+    position: absolute;
+    /* Foi usado position absolute para sobrepor o Span (botao com nome do sorvete, para então
+    ficar em cima da imagem e realizar o posionamento dela */
+    font-size: var(--fs-body);
+    background: var(--bg-bottom);
+    border-radius: 2rem;
+    color: var(--fc-tertiary);
+    width: 11.2rem;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    top: 1.6rem;
+    right: 1.6rem;
+    
+}
+
+.cards .card img {
+    width: 100%; /* aqui foi usado esse comando para ajustar todos cards usando o comando height: fit-content no cards e card
+    par então todos cards com imagem e botao e o texto ficar todos juntos*/
+}
